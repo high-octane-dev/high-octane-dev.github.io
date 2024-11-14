@@ -1,0 +1,31 @@
+site_name: "Cars: Mater-National Championship (PC) Modding Documentation"
+plugins:
+  - mkdocs-video:
+      is_video: True
+      video_autoplay: False
+  - search
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: pink
+    accent: red
+nav:
+  - index.md
+  - file-formats.md
+  - General Modding:
+    - "./general-modding/Audio.md"
+    - "./general-modding/Textures.md"
+    - "./general-modding/Models.md"
+    - "./general-modding/Animations.md"
+  - Pentane Framework:
+    - "./pentane-framework/what-is-pentane.md"
+    - "./pentane-framework/installation-and-setup.md"
+    - "./pentane-framework/configuring-patches.md"
+    - "./pentane-framework/creating-a-pentane-plugin.md"
+    - "./pentane-framework/api-reference.md"
+  - Reverse Engineering:
+    - "./reverse-engineering/ghidra-setup.md"
+    - "./reverse-engineering/cheat-engine.md"
+    - Tutorials:
+        - "./reverse-engineering/tutorials/expanding-the-css-dialogue-list.md"
