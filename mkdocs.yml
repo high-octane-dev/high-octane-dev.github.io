@@ -4,6 +4,15 @@ plugins:
       is_video: True
       video_autoplay: False
   - search
+markdown_extensions:
+  - sane_lists
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 theme:
   name: material
   palette:
@@ -14,16 +23,17 @@ nav:
   - index.md
   - file-formats.md
   - General Modding:
-    - "./general-modding/Audio.md"
-    - "./general-modding/Textures.md"
-    - "./general-modding/Models.md"
-    - "./general-modding/Animations.md"
+    - "./general-modding/animations.md"
+    - "./general-modding/audio.md"
+    - "./general-modding/models.md"
+    - "./general-modding/shaders.md"
+    - "./general-modding/textures.md"
   - Pentane Framework:
-    - "./pentane-framework/what-is-pentane.md"
-    - "./pentane-framework/installation-and-setup.md"
-    - "./pentane-framework/configuring-patches.md"
-    - "./pentane-framework/creating-a-pentane-plugin.md"
-    - "./pentane-framework/api-reference.md"
+    - "./pentane/what-is-pentane.md"
+    - "./pentane/installation-and-setup.md"
+    - "./pentane/creating-a-pentane-plugin-cpp.md"
+    - "./pentane/creating-a-pentane-plugin-rust.md"
+    - "./pentane/api-reference.md"
   - Reverse Engineering:
     - "./reverse-engineering/ghidra-setup.md"
     - "./reverse-engineering/cheat-engine.md"

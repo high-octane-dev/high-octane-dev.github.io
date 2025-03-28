@@ -58,10 +58,10 @@ Streaming data heap, must be paired with a SOI and TOC to form a streaming conta
 ParameterBlock files that describe a UI style sheet.
 
 ## tga
-Truevision TGA textures. Can be viewed and edited with most image manipulation tools such as GIMP, Paint.NET, and Adobe Photoshop.
+Truevision TARGA textures. Can be viewed and edited with most image manipulation tools such as GIMP, Paint.NET, and Adobe Photoshop.
 
 ## toc
-Maps streaming component IDs with instance IDs, and stores information about the layout and contents of the adjacent STR file.
+Stands for Table Of Contents. Maps streaming component IDs with instance IDs, and stores information about the layout and contents of the adjacent STR file.
 
 ## toy
 ParameterBlock files that describe the placement of Toy objects within scenes or collections.
@@ -73,7 +73,7 @@ ParameterBlock files that store track information.
 Compiled HLSL Vertex Shader.
 
 ## xng
-Stands for Xbox 360 Geometry. This format describes renderable models, similar to OBJ and FBX. Used in the Xbox 360, Playstation 3, and PC versions of Mater-National.
+Stands for Xenon (Xbox 360) Geometry. This format describes renderable models, similar to OBJ and FBX. Used in the Xbox 360, Playstation 3, and PC versions of Mater-National.
 
 ## xnm
-Stands for Xbox 360 Material. These ParameterBlock-based files describe individual materials by what shader they use, which textures should be bound and to which registers, and much more.
+Stands for Xenon (Xbox 360) Material. These ParameterBlock-based files describe individual materials by what shader they use, which textures should be bound and to which registers, and much more.
