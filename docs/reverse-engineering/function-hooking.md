@@ -10,7 +10,6 @@ This graphic, courtesy of the Super Smash Bros. Ultimate modding scene, should h
 
 In this example, our code runs first, as the call to the original function (denoted by the invokation of the `original!` macro) occurs at the end of the hook.
 
-Inline hooks work quite a bit differently from replacement hooks. They allow us to just insert our own code right *in the middle* of an existing function, removing the need to reimplement all the logic ourselves. Inline hooks are typically used to grab or quickly change the contents of a local variable or register at *just* the right moment. 
+Inline hooks work quite a bit differently from replacement hooks. They allow us to just insert our own code right *in the middle* of an existing function, removing the need to reimplement all the logic ourselves. Inline hooks are typically used to grab or quickly change the contents of a local variable or register at *just* the right moment. Here's another graphic for clarity:
 
-
-
+![Diagram depicting an inline hook](../assets/inline-hook-example.svg)
