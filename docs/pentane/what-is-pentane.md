@@ -5,6 +5,7 @@ Pentane is a mod-loader for the following games:
    - Cars: The Video Game (PC)
    - Cars: Mater-National Championship (PC)
    - Cars 2: The Video Game (PC)
+   - Cars 2: Arcade (PC)
    - Cars 3: Driven to Win (Xbox One)
 
 Notably, it introduces a user-configurable patch system for mods, and most importantly, allows plugin developers to modify game code via the plugin system.

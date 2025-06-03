@@ -37,5 +37,6 @@ nav:
   - Reverse Engineering:
     - "./reverse-engineering/ghidra-setup.md"
     - "./reverse-engineering/cheat-engine.md"
+    - "./reverse-engineering/function-hooking.md"
     - Tutorials:
         - "./reverse-engineering/tutorials/expanding-the-css-dialogue-list.md"
