@@ -1,6 +1,6 @@
 # API Reference
 
-WARNING!!!! PENTANE'S API IS NOT STABLE SO ALL OF THIS IS SUBJECT TO CHANGE!!!!
+**WARNING! PENTANE'S API IS NOT STABLE SO ALL OF THIS IS SUBJECT TO CHANGE!**
 
 If you're here for documentation on the Rust API, head over to [docs.rs](https://docs.rs/pentane/latest).
 
@@ -15,7 +15,7 @@ If you're here for documentation on the Rust API, head over to [docs.rs](https:/
 | `std::uint16_t` | `patch` | The patch version. |
 
 
-`PluginInformation` - Important plugin metadata, used by Pentane's plugin loader.
+`PluginInformation` - Important plugin metadata, used by Pentane's plugin loader. Should *always* be exactly 1024 bytes in size.
 
 | Type | Member | Description |
 | ----------- | ----------- | ----------- |
@@ -24,6 +24,7 @@ If you're here for documentation on the Rust API, head over to [docs.rs](https:/
 | `PentaneUUID` | `uuid` | The plugin's version 4 UUID. |
 | `SemVer` | `version` | The current version of the plugin. |
 | `SemVer` | `minimum_pentane_version` | The minimum version of Pentane that is required by the plugin. |
+| `char[???]` | `reserved` | Extra space for Pentane to potentially request more metadata from plugins in the future. Please leave this zero-initialized! |
 
 `PentaneCStringView` - A structure representing a non-owning view of a string.
 
@@ -84,6 +85,7 @@ extern "C" PluginInformation Pentane_PluginInformation = PluginInformation {
 	.author = "John Doe",
 	.uuid = {},
 	.version = { 0, 1, 0 },
-	.minimum_pentane_version = { 0, 1, 0 },
+	.minimum_pentane_version = { 0, 2, 0 },
+	.reserved = {},
 };
 ```

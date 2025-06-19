@@ -1,4 +1,4 @@
-# Creating a Plugin (Rust)
+# Creating A Plugin (Rust)
 
 WARNING!!!! PENTANE'S API IS NOT STABLE SO ALL OF THIS IS SUBJECT TO CHANGE!!!!
 

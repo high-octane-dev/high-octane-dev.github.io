@@ -1,4 +1,4 @@
-site_name: "Cars: Mater-National Championship (PC) Modding Documentation"
+site_name: "Pentane Documentation"
 plugins:
   - mkdocs-video:
       is_video: True
@@ -20,23 +20,27 @@ theme:
     primary: pink
     accent: red
 nav:
-  - index.md
-  - file-formats.md
-  - General Modding:
-    - "./general-modding/animations.md"
-    - "./general-modding/audio.md"
-    - "./general-modding/models.md"
-    - "./general-modding/shaders.md"
-    - "./general-modding/textures.md"
-  - Pentane Framework:
-    - "./pentane/what-is-pentane.md"
-    - "./pentane/installation-and-setup.md"
-    - "./pentane/creating-a-pentane-plugin-cpp.md"
-    - "./pentane/creating-a-pentane-plugin-rust.md"
-    - "./pentane/api-reference.md"
-  - Reverse Engineering:
-    - "./reverse-engineering/ghidra-setup.md"
-    - "./reverse-engineering/cheat-engine.md"
-    - "./reverse-engineering/function-hooking.md"
-    - Tutorials:
-        - "./reverse-engineering/tutorials/expanding-the-css-dialogue-list.md"
+    - index.md
+    - installation-and-setup.md
+    - Targets:
+        - Cars Mater-National Championship (PC):
+            - "./games/mater-national/file-formats.md"
+            - Guides:
+                - "./games/mater-national/guides/animations.md"
+                - "./games/mater-national/guides/audio.md"
+                - "./games/mater-national/guides/models.md"
+                - "./games/mater-national/guides/shaders.md"
+                - "./games/mater-national/guides/textures.md"
+        - Cars 2 The Video Game (PC/Arcade):
+            - "./games/cars-2/file-formats.md"
+            - Guides:
+                - "./games/cars-2/guides/arcade-essentials.md"
+    - Plugin Development:
+        - "./plugin-development/ghidra-setup.md"
+        - "./plugin-development/cheat-engine-setup.md"
+        - "./plugin-development/creating-a-pentane-plugin-cpp.md"
+        - "./plugin-development/creating-a-pentane-plugin-rust.md"
+        - "./plugin-development/function-hooking.md"
+        - "./plugin-development/api-reference.md"
+        - Walkthroughs:
+            - "./plugin-development/walkthroughs/expanding-the-css-dialogue-list.md"

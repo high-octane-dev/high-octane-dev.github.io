@@ -1,4 +1,4 @@
-# Creating a Plugin (C++)
+# Creating A Plugin (C++)
 
 ## Prerequisiste Software:
    - [Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/community/)
