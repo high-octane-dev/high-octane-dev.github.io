@@ -55,8 +55,19 @@ These functions are specific to Cars: Mater-National Championship:
 
 | Function Name | Return Type | Description |
 | ----------- | ----------- | ----------- |
-| `Pentane_GetDataDirectoryName();` | `PentaneCStringView` | Returns a view of the data directory name. (e.g. "DataPC", "Hi-Octane") |
 | `Pentane_IsSaveRedirectionEnabled();` | `std::int32_t` | Returns 0 if save file redirection is disabled, 1 if it is enabled. |
+
+These functions are specific to Cars 2: The Video Game:
+
+| Function Name | Return Type | Description |
+| ----------- | ----------- | ----------- |
+| `Pentane_IsWindowedModeEnabled();` | `std::int32_t` | Returns 0 if windowed mode is disabled, 1 if it is enabled. |
+
+These functions are specific to Cars 2: Arcade:
+
+| Function Name | Return Type | Description |
+| ----------- | ----------- | ----------- |
+| `Pentane_IsWindowedModeEnabled();` | `std::int32_t` | Returns 0 if windowed mode is disabled, 1 if it is enabled. |
 
 ## Example Code
 

@@ -16,7 +16,7 @@ Stands for Index Buffer. Used to store raw index data in a format convinent for 
 Localization dictionaries. Use `indctive` to decode them into standard JSONs.
 
 ## zip
-ZIP Archives, with extra metadata required by the game's filesystem. Use the `why` tool included in the Python module `c2ditools` to re-pack archives in a game-friendly way.
+ZIP Archives, with extra metadata embedded inside used by the engine's filesystem. Use the `why` tool included in the Python package `c2ditools` to re-pack archives in a game-friendly format.
 
 ## dds
 Microsoft DirectDraw Surface textures. Can be viewed and edited with most image manipulation tools such as GIMP, Paint.NET, and Adobe Photoshop.
