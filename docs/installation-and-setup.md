@@ -8,7 +8,7 @@ If you require a German-language tutorial, click [here](https://docs.google.com/
 
 If you require a Polish-language tutorial, click [here](https://docs.google.com/POLISH_TUTORIAL_HERE).
 
-If you require a Russian-language tutorial, click [here](https://docs.google.com/RUSSIAN_TUTORIAL_HERE).
+Если вам нужен русскоязычный туториал, нажмите [здесь](https://docs.google.com/document/d/1GjcIO-WiiNa1pBaw-ebC5h4a-Ynzf2rBOzqBgNX-oEU).
 
 ## Unpacking your Executable
 

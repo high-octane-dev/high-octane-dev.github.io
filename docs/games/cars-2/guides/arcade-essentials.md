@@ -8,7 +8,7 @@ If you require a German-language tutorial, click [here](https://docs.google.com/
 
 If you require a Polish-language tutorial, click [here](https://docs.google.com/POLISH_TUTORIAL_HERE).
 
-If you require a Russian-language tutorial, click [here](https://docs.google.com/RUSSIAN_TUTORIAL_HERE).
+Если вам нужен русскоязычный туториал, нажмите [здесь](https://docs.google.com/document/d/1YhnYanMW06EJkPTmW2CpTRwuoUwi82A4tlPDrTKS3Dc).
 
 WARNING: ArcadeEssentials is **NOT COMPATIBLE** with PC version of Cars 2: The Video Game! It is *only* compatible with Cars 2: Arcade.
 
@@ -17,7 +17,7 @@ WARNING: ArcadeEssentials is **NOT COMPATIBLE** with PC version of Cars 2: The V
 3. Download the `release.zip` file linked under the Assets tab.
 4. You will find two folders in the zip file, one named `Pentane` and one labeled `assets`.
 	- If you're planning on installing an overhaul mod such as *Cars 2: Restorations* or *Cars 2: Deluxe*, just copy the `Pentane` folder into the root of your game's installation, right next to `sdaemon.exe` and `Pentane.dll`.
-	- Otherwise, copy **both** the `assets` folder and the `Pentane` folder into the root of your game's installation, right next to `sdaemon.exe` and `Pentane.dll`. Make sure *replace* files already present in the destination.
+	- Otherwise, copy **both** the `assets` folder and the `Pentane` folder into the root of your game's installation, right next to `sdaemon.exe` and `Pentane.dll`. Make sure to *replace* any files already present in the destination.
 5. Open `Pentane/config.toml` in a text editor, like Notepad or Notepad++.
 6. Under the `[plugins]` section, edit the `enabled_plugins` list to include `"ArcadeEssentials.dll"`, and save your changes.
 	- Example:
