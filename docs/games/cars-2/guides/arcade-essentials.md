@@ -1,6 +1,6 @@
 # Installing ArcadeEssentials
 
-Si necesita un tutorial en español, haga clic [aquí](https://docs.google.com/SPANISH_TUTORIAL_HERE).
+Si necesita un tutorial en español, haga clic [aquí](https://docs.google.com/document/d/1YqyRbjl1uCQQVtTxtIRl78XCedBSRKVhGTK77_Tzag8).
 
 If you require a French-language tutorial, click [here](https://docs.google.com/FRENCH_TUTORIAL_HERE).
 

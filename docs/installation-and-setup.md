@@ -1,6 +1,6 @@
 # Installation and Setup
 
-Si necesita un tutorial en español, haga clic [aquí](https://docs.google.com/SPANISH_TUTORIAL_HERE).
+Si necesita un tutorial en español, haga clic [aquí](https://docs.google.com/document/d/1-JMqgFMapPnOLLIyFkVIt2tMPIa69cbanFE3JObz1wA).
 
 If you require a French-language tutorial, click [here](https://docs.google.com/FRENCH_TUTORIAL_HERE).
 
