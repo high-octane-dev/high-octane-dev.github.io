@@ -2,12 +2,6 @@
 
 Si necesita un tutorial en español, haga clic [aquí](https://docs.google.com/document/d/1YqyRbjl1uCQQVtTxtIRl78XCedBSRKVhGTK77_Tzag8).
 
-If you require a French-language tutorial, click [here](https://docs.google.com/FRENCH_TUTORIAL_HERE).
-
-If you require a German-language tutorial, click [here](https://docs.google.com/GERMAN_TUTORIAL_HERE).
-
-If you require a Polish-language tutorial, click [here](https://docs.google.com/POLISH_TUTORIAL_HERE).
-
 Если вам нужен русскоязычный туториал, нажмите [здесь](https://docs.google.com/document/d/1YhnYanMW06EJkPTmW2CpTRwuoUwi82A4tlPDrTKS3Dc).
 
 WARNING: ArcadeEssentials is **NOT COMPATIBLE** with PC version of Cars 2: The Video Game! It is *only* compatible with Cars 2: Arcade.

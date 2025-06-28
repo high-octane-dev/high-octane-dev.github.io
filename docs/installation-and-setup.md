@@ -2,12 +2,6 @@
 
 Si necesita un tutorial en español, haga clic [aquí](https://docs.google.com/document/d/1-JMqgFMapPnOLLIyFkVIt2tMPIa69cbanFE3JObz1wA).
 
-If you require a French-language tutorial, click [here](https://docs.google.com/FRENCH_TUTORIAL_HERE).
-
-If you require a German-language tutorial, click [here](https://docs.google.com/GERMAN_TUTORIAL_HERE).
-
-If you require a Polish-language tutorial, click [here](https://docs.google.com/POLISH_TUTORIAL_HERE).
-
 Если вам нужен русскоязычный туториал, нажмите [здесь](https://docs.google.com/document/d/1GjcIO-WiiNa1pBaw-ebC5h4a-Ynzf2rBOzqBgNX-oEU).
 
 ## Unpacking your Executable
