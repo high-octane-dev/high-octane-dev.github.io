@@ -2,6 +2,8 @@
 
 Si necesita un tutorial en español, haga clic [aquí](https://docs.google.com/document/d/1-JMqgFMapPnOLLIyFkVIt2tMPIa69cbanFE3JObz1wA).
 
+Jeśli potrzebujesz poradnika w języku polskim, kliknij [here](https://docs.google.com/document/d/1Jj9dKWvL86pcPFK7qxDL7zXaHvla32o7KxlDQAN4Do8).
+
 Если вам нужен русскоязычный туториал, нажмите [здесь](https://docs.google.com/document/d/1GjcIO-WiiNa1pBaw-ebC5h4a-Ynzf2rBOzqBgNX-oEU).
 
 ## Unpacking your Executable
