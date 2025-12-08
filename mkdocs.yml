@@ -25,6 +25,9 @@ nav:
     - Targets:
         - Cars Mater-National Championship (PC):
             - "./games/mater-national/file-formats.md"
+            - "./games/mater-national/basic-tools.md"
+            - Useful Tables:
+                - "./games/mater-national/car-names.md"
             - Guides:
                 - "./games/mater-national/guides/animations.md"
                 - "./games/mater-national/guides/audio.md"
