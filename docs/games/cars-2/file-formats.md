@@ -1,10 +1,10 @@
 # File Formats
 
 ## oct
-Tupperware files. Use `matryoshka` to decode them into standard JSON or YAML.
+Tupperware container files for model metadata and textures. Use `oct decode` with the `offsetting` tool to convert them into JSON or YAML, and `oct encode` to rebuild them. Append `-t` to the end of the command to extract or embed textures.
 
 ## mer
-Meridian tree structures, stored as Tupperware. Use matryoshka to decode them into standard JSON or YAML.
+Meridian tree structures, stored as Tupperware. Use `offsetting` to decode them into standard JSON or YAML.
 
 ## vbuf
 Stands for Vertex Buffer. Used to store raw vertex data in a format convinent for the rendering engine. Metadata from an `oct` file is required to properly parse these files.
@@ -25,4 +25,8 @@ Microsoft DirectDraw Surface textures. Can be viewed and edited with most image 
 Groups of compiled HLSL (High-Level Shader Language) shaders, stored inside Tupperware files. Use `matryoshka` to decode them into standard JSON or YAML.
 
 ## swf
+
 Standard Shockwave Flash files. Used by the game's Autodesk Scaleform-backed UI system.
+
+## anno 
+Modified version of an Annosoft Lipsync Tool output file. Contains phonemes alongside timestamps that the game uses to lipsync characters mouths to audio.
