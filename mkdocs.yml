@@ -35,6 +35,7 @@ nav:
                 - "./games/mater-national/guides/shaders.md"
                 - "./games/mater-national/guides/textures.md"
         - Cars 2 The Video Game (PC/Arcade):
+            - "./games/cars-2/ArcadeVWin32Wii.md"
             - "./games/cars-2/middleware.md"
             - "./games/cars-2/file-formats.md"
             - Guides:
@@ -49,3 +50,4 @@ nav:
         - Walkthroughs:
 
             - "./plugin-development/walkthroughs/expanding-the-css-dialogue-list.md"
+
