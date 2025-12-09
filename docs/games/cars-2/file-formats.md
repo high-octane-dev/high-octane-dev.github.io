@@ -25,7 +25,6 @@ Microsoft DirectDraw Surface textures. Can be viewed and edited with most image 
 Groups of compiled HLSL (High-Level Shader Language) shaders, stored inside Tupperware files. Use `matryoshka` to decode them into standard JSON or YAML.
 
 ## swf
-
 Standard Shockwave Flash files. Used by the game's Autodesk Scaleform-backed UI system.
 
 ## anno 
