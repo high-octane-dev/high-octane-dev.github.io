@@ -1,7 +1,7 @@
 # Arcade (Win32) vs PC (Win32Wii)
 
 ## What is Arcade / Win32?
-Disney Pixar's Cars Arcade - referred to here simply as Arcade - is a heavily modified version development build of the Xbox 360-equivalent PC version of Cars 2: The Video Game internally known as Win32. The modified version was created by Raw Thrills to function as a simplified, generic kart racer for arcade venues like Chuck E. Cheese, it features streamlined gameplay and only a single mode (Race) and only 6 out of the 15 tracks while also lacking all of the Arena maps.
+Disney Pixar's Cars Arcade - referred to here simply as Arcade - is a heavily modified development build of the Xbox 360-equivalent PC version of Cars 2: The Video Game internally known as Win32. The modified version was created by Raw Thrills to function as a simplified, generic kart racer for arcade venues like Chuck E. Cheese, it features streamlined gameplay and only a single mode (Race) and only 6 out of the 15 tracks while also lacking all of the Arena maps.
 
 ## What is PC / Win32Wii
 The official PC port of Cars 2: The Video Game on the other hand was a STRIPPED DOWN port of the version produced for the Wii. As a result of this, Win32Wii features heavily downgraded visuals compared to Arcade, but unlike Arcade, retains all gameplay modes.
