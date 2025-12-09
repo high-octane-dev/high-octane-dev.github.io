@@ -1,7 +1,7 @@
 # Middleware
 
 ## Scaleform GFx Ver. 3.3.88
-Autodesk Scaleform GFx is used to render the user interface using `.swf` files that are contained within the `/assets/flash/flash.zip` file. The JPEX Free Flash Decompiler can be used to view and edit the existing `.swf` files in the game. Adding additional menus requires modifying the game via a Pentane plugin.
+Autodesk Scaleform GFx is used to render the user interface using `.swf` files that are contained within the `/assets/flash/flash.zip` file. The JPEXS Free Flash Decompiler can be used to view and edit the existing `.swf` files in the game. Adding additional menus requires modifying the game via a Pentane plugin.
 
 ## FMOD Designer Ver. 4.32.9 (Arcade)* / 4.32.8 (Win32Wii)
 FMOD Designer was used to create and control the interactive audio system in the game, which includes sound effects, ambience, and event-based audio behaviors. The resulting project data is compiled and loaded through the `FMOD API` at runtime, while the `FSB` file can be edited (This contains the raw audio data) the `FEV` files cannot unless they are decompiled into `FDP` files, while theoretically possible this has not been achieved yet, this means no editing of the events themselves. *(In Arcade there is a single 4.32.8 file, don't ask why. ¯\_(ツ)_/¯ )
