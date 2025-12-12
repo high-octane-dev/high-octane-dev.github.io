@@ -1,6 +1,7 @@
 # Creating A Plugin (Rust)
 
-WARNING!!!! PENTANE'S API IS NOT STABLE SO ALL OF THIS IS SUBJECT TO CHANGE!!!!
+!!! warning
+    The Pentane API is still unfinished and the info here is subject to change in the future.
 
 ## Prerequisiste Software
    - [rustup](https://www.rust-lang.org/tools/install)
@@ -19,7 +20,7 @@ WARNING!!!! PENTANE'S API IS NOT STABLE SO ALL OF THIS IS SUBJECT TO CHANGE!!!!
 3. Click on ``cargo.toml`` and add these lines to the bottom before then saving the file (Ctrl-S):
 ```
 [lib]
-crate-type = ["dylib"]
+crate-type = ["cdylib"]
 ```
 4. Right-click on the root of the project directory, and create a new folder named ``.cargo`` right next to ``src``.
 5. Create a new file inside the ``.cargo`` folder named ``config.toml``, and paste these lines into the file before then saving it:
@@ -29,8 +30,24 @@ target = ["i686-pc-windows-msvc"]
 ```
 6. Now rename the file ``src/main.rs`` to ``src/lib.rs`` and open it.
 7. Delete all contents and paste this template function in:
-```
-#[no_mangle]
+```rust
+use pentane::{PentaneSemVer, PentaneUUID, PluginInformation};
+
+#[unsafe(no_mangle)]
+#[used]
+pub static Pentane_PluginInformation: PluginInformation = PluginInformation::new(
+    b"Plugin Name",
+    b"Author",
+    PentaneUUID::from_str("Unique UUID"), // replace this with an actual ID!
+    PentaneSemVer::new(0, 1, 0),
+    PentaneSemVer::new(1, 0, 0),
+);
+
+#[unsafe(no_mangle)]
+#[used]
+pub static Pentane_PluginDependencyCount: usize = 0;
+
+#[unsafe(no_mangle)]
 extern "stdcall" fn Pentane_Main() {
 	
 }
@@ -39,5 +56,6 @@ extern "stdcall" fn Pentane_Main() {
 9. Navigate to your project folder via Windows Explorer, then follow the path  ``./target/i686-pc-windows-msvc/release/`` to locate ``<project_name>.dll``.
 10. Copy your newly compiled plugin to ``Pentane/Plugins``.
 11. Enable your plugin in ``Pentane/config.toml``.
+
 
 Congratulations! You have built your first plugin!
