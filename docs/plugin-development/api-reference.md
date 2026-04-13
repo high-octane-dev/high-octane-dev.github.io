@@ -96,7 +96,7 @@ extern "C" PluginInformation Pentane_PluginInformation = PluginInformation {
 	.author = "John Doe",
 	.uuid = {},
 	.version = { 0, 1, 0 },
-	.minimum_pentane_version = { 0, 2, 0 },
+	.minimum_pentane_version = { 1, 0, 0 },
 	.reserved = {},
 };
 ```
