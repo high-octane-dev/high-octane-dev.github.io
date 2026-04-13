@@ -2,6 +2,7 @@
 
 ## What Is An `.oct` File?
 Files with the `.oct` extension are Tupperware container files for model metadata and textures. An .oct file is not just a model file or model format, it is a complete rigging and behavior system including the following:
+
 - FX (e.g. weapon and turbo) attachment points (typically character-only)
 - Physics and Constraint systems
 - Animation logic (ClipData)
@@ -60,7 +61,6 @@ When using `oct decode` with the offsetting tool to convert them into JSON or YA
 ```
 **Pool example 1**
 
-
 ```JSON
   "TexturePool": {
     "Texture#0": {
@@ -94,22 +94,25 @@ When using `oct decode` with the offsetting tool to convert them into JSON or YA
 ```
 **Pool example 2** 
 
-
 Depending on the `.oct` file you are decoding, there may be differences with which pools and data are present, but regardless most of it all works much the same.
 
 ## Important Sections Within An `.oct`
 While there are various **pools** within an `.oct` file, there are some that are crucial which will be listed here:
-- ## SubNetworkPool
+
+- ## SubNetworkPool  
     - While there isn't a ton of documentation or research behind `SubNetworkPool`, there are some things we know and can assume from this location. The `"Scene"` listed within `SubNetworkPool` is the main network containing nearly everything. In other words, `SubNetworkPool` is the "main container" holding all objects, controls, and logic for the model.
-    ```JSON
+
+```JSON
     "SubNetworkPool": {
   "SubNetwork#0": {
     "Name": "Scene",
     "Type": "Scene",
-    ```
+```
+
 - ## HeaderStrings
     - `HeaderStrings` is a string table referencing everything deeper within the various sections of the `SubNetworkPool` such as `HeaderLayout`, `HeaderStringIndices` and `DataNodePool`.
     - Essentially a dictionary of all named and utilized parts of the model such as controls, bones, facial features, and other systems like weapons.
+
 ```JSON
     "HeaderStrings": [
   "Anchor",
@@ -120,9 +123,11 @@ While there are various **pools** within an `.oct` file, there are some that are
   ...
 ]
 ```
+
 - ## DataNodePool
     - `DataNodePool` contains a lot of the actual data for various parts of the model in various nodes.
     - There are multiple node types in `DataNodePool`, but the most commonly seen types are `Bool`, `Dilation`, `Float`, `Transform`, `ClipData` and `UberConstraintData`. So far the uses and importance of many of these nodes are unknown.
+
 ```JSON
         "DataNode#274": {
           "Header": 216,
@@ -159,6 +164,7 @@ While there are various **pools** within an `.oct` file, there are some that are
           }
         },
 ```
+
 - ## CollisionShapePool
     - The `CollisionShapePool` contains all the collision geometry used by the model.
     - These "Collision Shapes" are simplified shapes used for physics, hit detection, and interaction, not rendering.
@@ -216,7 +222,7 @@ While there are various **pools** within an `.oct` file, there are some that are
       }
     }
   },
-  ```
+```
 
 - ## TexturePool
     - Contains raw texture-related data to used by the model.
@@ -257,6 +263,7 @@ While there are various **pools** within an `.oct` file, there are some that are
 - ## MaterialPool
     - `MaterialPool` is the location where material-related data is stored.
     - Here you can find various data on what shaders, textures, and effects parts of a model can use. Modifying values and entries within a material node can change the look of how a model appears.
+
 ```JSON
     "Material#2": {
       "Name": "McQueen_Body",
@@ -361,10 +368,11 @@ While there are various **pools** within an `.oct` file, there are some that are
     },
 ```
 <font size="5"><p align="center">Here's an example on how a model can change appearance by modifying the materials.</font></p>
-<p align="center"><img src="../assets/fire_shu_2.png" width="500">
-<p align="center"><img src="../assets/fire_shu_1.png" width="500">
+
+![Fire Shu image 2](../../../assets/fire_shu_2.png)
+
+![Fire Shu image 1](../../../assets/fire_shu_1.png)
 <p align="center"><font size="5">Credit to I Guess for the images</font></p>
--
 
 - ## IndexBufferPool
     - Location where indices (References to vertices) are stored.
@@ -377,4 +385,4 @@ While there are various **pools** within an `.oct` file, there are some that are
     - Defines the interpretation of vertex buffer data from `VertexBufferPool`. (explains what each piece of vertex data means and how to read it.)
     - Describes which attributes exist on a mesh (position, normal, UV, ColorPrelight, etc)
 
-<font size="5"><p align="center">**All of these 4 pools come together to create a pipeline that ultimately results the final, rendered model. If you modify any one of these it will destroy the look of a model. These 4 pools are typically modified in tandem when custom models are implemented.**</font></p>
+<font size="5"><p align="center">All of these 4 pools come together to create a pipeline that ultimately results the final, rendered model. If you modify any one of these it will destroy the look of a model. These 4 pools are usually modified in tandem when custom models are implemented.</font></p>
