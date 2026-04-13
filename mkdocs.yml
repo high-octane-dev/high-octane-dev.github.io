@@ -39,8 +39,8 @@ nav:
             - "./games/cars-2/middleware.md"
             - "./games/cars-2/basic-tools.md"
             - File Formats:
-                - "./games/cars-2/file-formats-list.md"
-                - "./games/cars-2/oct-format.md"
+                - "./games/cars-2/file-formats/file-formats-list.md"
+                - "./games/cars-2/file-formats/oct-format.md"
             - Guides:
                 - "./games/cars-2/guides/arcade-essentials.md"
     - Plugin Development:
