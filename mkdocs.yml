@@ -37,6 +37,7 @@ nav:
         - Cars 2 The Video Game (PC/Arcade):
             - "./games/cars-2/pc-vs-arcade.md"
             - "./games/cars-2/middleware.md"
+            - "./games/cars-2/basic-tools.md"
             - File Formats:
                 - "./games/cars-2/file-formats-list.md"
                 - "./games/cars-2/oct-format.md"
