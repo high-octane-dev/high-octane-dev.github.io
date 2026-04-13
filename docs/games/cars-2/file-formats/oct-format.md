@@ -361,9 +361,8 @@ While there are various **pools** within an `.oct` file, there are some that are
     },
 ```
 <font size="5"><p align="center">Here's an example on how a model can change appearance by modifying the materials.</font></p>
-<p align="center"><img src="https://media.discordapp.net/attachments/1097615996128342206/1474063596836098171/Cars_2__Arcade_19_02_2026_15_09_09.png?ex=69dd0a34&is=69dbb8b4&hm=c3f6332fa6f3fdf575a2c022b7be685a5d9d365205cbe6f7d6b68ad956fd8ed3&=&format=webp&quality=lossless&width=1794&height=1009" width="500">
-<p align="center"><img src="https://media.discordapp.net/attachments/1097615996128342206/1474063596249157763/Cars_2__Arcade_19_02_2026_15_09_03.png?ex=69dd0a34&is=69dbb8b4&hm=f894a8b5f11f6dc8c9246ab38c284c5c47fcb5dfea0fab1b169c7c8608931024&=&format=webp&quality=lossless&width=1794&height=1009" width="500">
-
+<p align="center"><img src="../assets/fire_shu_2.png" width="500">
+<p align="center"><img src="../assets/fire_shu_1.png" width="500">
 <p align="center"><font size="5">Credit to I Guess for the images</font></p>
 -
 
