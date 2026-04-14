@@ -432,7 +432,7 @@ While there are various sections within an `.oct` file, there are some that are 
 <p align="center"><font size="5">Credit to I Guess for the images</font></p>
 
 - ## IndexBufferPool
-    - Location where indices (References to vertices) are stored.
+    - Location where vertex indices are stored.
 - ## VertexBufferPool
     - Stores raw vertex data, holding the actual geometrical points that make up the model.
 - ## IndexStreamPool
@@ -441,5 +441,121 @@ While there are various sections within an `.oct` file, there are some that are 
 - ## VertexStreamPool
     - Defines the interpretation of vertex buffer data from `VertexBufferPool`. (explains what each piece of vertex data means and how to read it.)
     - Describes which attributes exist on a mesh (`Position`, `Normal`, `UV`, `ColorPrelight`, etc.)
+- ## SceneComponentPool
+    - Describes `SceneComponent`s which, as their name suggests, are external components that can be attached to nodes inside `SceneTreeNodePool`. There are two main types of `SceneComponents` that you'll see in Cars 2: `SkinRemap` and `CarEyes`.
 
-<font size="5"><p align="center">All of these 4 pools come together to create a pipeline that ultimately results the final, rendered model. If you modify any one of these it will destroy the look of a model. These 4 pools are usually modified in tandem when custom models are implemented.</font></p>
+      ```json
+      "SceneComponentPool": {
+        "SceneComponent#0": {
+            "Type": "SkinRemap",
+            "RemapData": [32, 33, 34, 35, 28, 29, 30, 31, ...]
+        },
+        "SceneComponent#1": {
+            "Type": "CarEyes"
+        }
+      }
+      ```
+
+      For characters, `CarEyes` simply just needs to *be* there. No actual scene tree nodes need to explicitly reference it, instead, it just needs to be attached to an `ComponentLink` inside `AssociationPool`. `SkinRemap`, on the other hand, *must* be there for the game's skinning system to work.
+
+      `SkinRemap` exists because many rigs in this game often have a lot of bones, and as a result, there are not enough vertex shader constant registers on DirectX 9 on desktop Windows to fit 4x4 transformation matrices for every single bone. So, the developers work around this by limiting the number of bones that each mesh can use to 42, and split up the meshes such that this rule is followed. Usually, every mesh has its own `SkinRemap`, but this isn't a hard rule, so if the scene's skeleton has less than 42 bones, you can assign every mesh the same `SkinRemap`.
+
+      Interpreting `SkinRemap` correctly is crucial to importing bone influences. When processing a mesh's `VertexStream`, you interpret the `BoneIndices` element as follows:
+
+      ```py
+      # i hate this stupid engine
+      boneIndices = struct.unpack("BBBB", vBuf.read(4))
+      remapData = tup["SceneComponentPool"][f"SceneComponent{sceneComponentIndex}"]["RemapData"]
+      # these now actually match the `BoneID`s listed in each bone's definition in `SceneTreeNodePool`. 
+      boneIndices = remapData[boneIndices[0]], remapData[boneIndices[1]], remapData[boneIndices[2]], remapData[boneIndices[3]]
+      ```
+
+      (This is pseudocode. `vBuf` represents a handle to an actual `.vbuf` file, seeked to the offset of some `VertexStream` and the inner offset of the `BoneIndices` element. `sceneComponentIndex` represents a `SceneComponentReference` from a mesh listed in `SceneTreeNodePool`.)
+
+      `SkinRemap` doesn't exist on the console versions of Cars 2, ~~because of course it doesn't. Nothing is ever as simple as it should be.~~ because there are more than enough vertex shader constant registers on both PlayStation 3 and Xbox 360 to fit every bone's transform without needing to remap things. ~~I don't know who to blame here. Microsoft? NVIDIA? AMD? I'm not smart enough to figure this one out.~~
+
+- ## SceneTreeNodePool
+    - Describes `SceneTreeNode`s. As their name suggests, these describe nodes in the scene tree; bones, meshes, and everything in between are listed here:
+
+      Meshes are either typed as `SubGeometryLit` or `SubGeometry`. Either way, they have vertex streams, scene components, and an index stream attached to them. Usually, the number of vertex streams attached to a mesh is exactly two on the Windows ports of Cars 2, and only one scene component is attached. **However, it is extremely important to note that meshes are not allowed to have three vertex streams attached in Cars 2: Arcade. That only works on Win32_Wii. Trying to use a mesh with three vertex streams on Arcade will result in a game crash.**
+
+      ```json
+      "SceneTreeNodePool": {
+        "Node#40": {
+          "Type": "SubGeometryLit",
+          "ParentNodeReferences": [39],
+          "LocalToParentMatrix": [
+            1.0, 0.0, 0.0, 0.0,
+            0.0, 1.0, 0.0, 0.0,
+            0.0, 0.0, 1.0, 0.0,
+            0.0, 0.0, 0.0, 1.0
+          ],
+          "BoundingCenter": [-2.3841858e-7, 0.7533521, -0.12268567],
+          "NodeName": "bodyMesh_McQueen_Body",
+          "RenderCaps": 2363407,
+          "MaterialReference": 2,
+          "BillboardType": -1,
+          "VertexStreamReferences": [0, 1],
+          "IndexStreamReference": 0,
+          "SceneComponentReferences": [0]
+        }
+      }
+      ```
+
+      Bones are simply typed as `Bone`s. The data inside each bone definition is mostly self-explanatory.
+
+      ```json
+      "SceneTreeNodePool": {
+        "Node#4": {
+          "NodeName": "Body",
+          "Uuid": "9b3797f9-b527-45cc-b0bd-158f09a8f5cc",
+          "DisplayLayer": 0,
+          "Type": "Bone",
+          "ParentGeometryReference": 1,
+          "BillboardType": -1,
+          "BoneID": 1,
+          "BoneToModelMatrix": [
+            1.0, -0.0, 4.371139e-8, 0.0,
+            0.0, 1.0, 0.0, 0.0, 
+            -4.371139e-8, 0.0, 1.0, 0.0,
+            0.0, 0.43998054, 0.0, 1.0
+          ],
+          "BoneToStandardMatrix": [
+            1.0, 0.0, 0.0, 0.0,
+            0.0, 1.0, 0.0, 0.0,
+            0.0, 0.0, 1.0, 0.0,
+            0.0, -0.43998054, 0.0, 1.0
+          ],
+          "PivotPoint": [0.0, 0.43998054, 0.0],
+          "BoneEndPoint": [-4.371139e-9, 0.43998054, 0.1],
+          "BoundingBox": [-1.1486998, -0.3883578, -2.4852846, 1.1486993, 1.015101, 1.7133833],
+          "NumAssignedVerts": 2691,
+          "VizCullingBound": 1,
+          "ParentNodeReferences": [3],
+          "LocalToParentMatrix": [
+            1.0, 0.0, 0.0, 0.0,
+            0.0, 1.0, 0.0, 0.0,
+            0.0, 0.0, 1.0, 0.0,
+            0.0, 0.0, 0.0, 1.0
+          ]
+        }
+      }
+      ```
+
+- ## AssociationPool
+    - Describes `Associaton`s. Very little is known about these, unfortunately.
+
+      ```json
+      "AssociationPool": {
+        "Association#0": {
+          "NodeName": "ComponentLink_0",
+          "Type": "ComponentLink",
+          "NodeRef": 1,
+          "ComponentRef": 1
+        }
+      }
+      ```
+
+      One thing we *do* know, is that the first `Association` in a character's scene file will allways be a `ComponentLink`, and will always have the `ComponentRef` point to the `CarEyes` entry in `SceneComponentPool`, no matter what.
+
+<font size="5"><p align="center">IndexBufferPool, IndexStreamPool, VertexBufferPool, and VertexStreamPool come together to create a pipeline that ultimately results in the final, rendered model. If you modify any one of these it will destroy the look of a model. These four pools are usually modified in tandem when custom models are created.</font></p>
