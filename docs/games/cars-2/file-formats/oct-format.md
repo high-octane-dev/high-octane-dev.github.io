@@ -1,15 +1,10 @@
 # OCT Format Documentation
 
 **Disclaimer**: If you're a non-programmer, please don't be intimidated by random code snippets showing up on this page. You don't need to be a genius to mod this game! The details are just there for the select few people that need them.
-<<<<<<< HEAD
-
-## What are `.oct` files?
-Files with the `.oct` extension are Tupperware files that describe a scene/game object, and often contain model metadata and textures. An `oct` file doesn't just describe a 3D model, it typically contains a complete rigging and behavior system encompassing the following:
-=======
->>>>>>> e24ed0071596ae0353003e272b19a0864a6024d7
 
 ## What are `.oct` files?
 Files with the `.oct` extension are Tupperware files that describe a scene/game object, and often contain model metadata and textures. An `.oct` file doesn't just describe a 3D model, it typically contains a complete rigging and behavior system encompassing the following:
+
 - FX (e.g. weapon and turbo) attachment points (typically character-only)
 - Physics and Constraint systems
 - Animation logic (ClipData)
@@ -68,10 +63,6 @@ When using `oct decode` with the offsetting tool to convert an `.oct` file into 
   }
 }
 ```
-<<<<<<< HEAD
-
-=======
->>>>>>> e24ed0071596ae0353003e272b19a0864a6024d7
 **Ex. TexturePool from `mcqueen.oct`:**
 
 ```JSON
@@ -111,8 +102,10 @@ Depending on the `.oct` file you are decoding, there may be differences with whi
 
 ## Important sections within an `.oct`:
 While there are various sections within an `.oct` file, there are some that are especially important for modding, which will be listed here:
+
 - ## SubNetworkPool
     - While there isn't a ton of documentation or research behind `SubNetworkPool`, there are some things we know and can derive from context clues. The `"Scene"` listed within `SubNetworkPool` is the main network containing nearly everything. In other words, `SubNetworkPool` is the 'main container' holding all objects, controls, and logic for the scene.
+
     ```JSON
     "SubNetworkPool": {
       "SubNetwork#0": {
@@ -122,7 +115,6 @@ While there are various sections within an `.oct` file, there are some that are 
       }
     }
     ```
-<<<<<<< HEAD
 
 - ## HeaderStrings / HeaderStringIndices / HeaderLayout
 
@@ -145,6 +137,7 @@ While there are various sections within an `.oct` file, there are some that are 
     ```
 
     These three keys inside a `SubNetwork` definition describe the heirarchy of `Headers`, which are referenced within the nodes inside the network's `DataPool`. `HeaderLayout` is where it all starts; to interpret it correctly, you'll go through this array and process two elements at a time. The first element is an index that will eventually point back to a parent, and the second element will state the number of children. `HeaderStringIndices` maps the indices of headers into indices into the `HeaderStrings` array. (**If you're a non-programmer, you can just think of `HeaderStrings` as an immutable dictionary of all named and utilized parts of the model such as controls, bones, facial features, and other systems like weapons.**)
+
     ```py
     import json
 
@@ -152,39 +145,10 @@ While there are various sections within an `.oct` file, there are some that are 
     with open("mcqueen.oct.json", "r") as f:
       tup = json.load(f)
 
-=======
-- ## HeaderStrings / HeaderStringIndices / HeaderLayout
-    ```JSON
-    "SubNetwork#0": {
-      "Name": "Scene",
-      "Type": "Scene",
-      "HeaderStrings": [
-        "Anchor",
-        "Lazy_MouthConstraintGroup",
-        "Transform",
-        "KinematicState",
-        "Body_Ctrl",
-        ...
-      ],
-      "HeaderStringIndices": [0, 1, 2, 3, 4, 6, 7, ...],
-      "HeaderLayout": [0, 1, 1, 197, 6, 1, ...],
-      ...
-    }
-    ```
-    These three keys inside a `SubNetwork` definition describe the heirarchy of `Headers`, which are referenced within the nodes inside the network's `DataPool`. `HeaderLayout` is where it all starts; to interpret it correctly, you'll go through this array and process two elements at a time. The first element is an index that will eventually point back to a parent, and the second element will state the number of children. `HeaderStringIndices` maps the indices of headers into indices into the `HeaderStrings` array. (**If you're a non-programmer, you can just think of `HeaderStrings` as an immutable dictionary of all named and utilized parts of the model such as controls, bones, facial features, and other systems like weapons.**)
-    ```py
-    import json
-
-    # Loading an `.oct` file's `.json` representation into a Python `dict`.
-    with open("mcqueen.oct.json", "r") as f:
-      tup = json.load(f)
-
->>>>>>> e24ed0071596ae0353003e272b19a0864a6024d7
     # Pulling out `HeaderStrings`, `HeaderStringIndices`, and `HeaderLayout`.
     strings = tup["SubNetworkPool"]["SubNetwork#0"]["HeaderStrings"]
     stringIndices = tup["SubNetworkPool"]["SubNetwork#0"]["HeaderStringIndices"]
     layout = tup["SubNetworkPool"]["SubNetwork#0"]["HeaderLayout"]
-<<<<<<< HEAD
 
     # Reconstructing the Header heirarchy:
     headerCount = len(stringIndices) + 1
@@ -209,39 +173,11 @@ While there are various sections within an `.oct` file, there are some that are 
       snpNode = tup["SubNetworkPool"]["SubNetwork#0"]["DataNodePool"][snpNodeKey]
       _header = headers[snpNode["Header"]]
     ```
-=======
->>>>>>> e24ed0071596ae0353003e272b19a0864a6024d7
 
-    # Reconstructing the Header heirarchy:
-    headerCount = len(stringIndices) + 1
-    headers = [None] * headerCount
-
-    headers[0] = {"Name": "SNAnchor"}
-
-    numCreated = 0
-    for i in range(0, len(layout), 2):
-      parentIndex = layout[i]
-      childCount = layout[i + 1]
-      assert(parentIndex < numCreated + 1)
-      assert(numCreated + childCount <= len(stringIndices))
-      
-      for j in range(childCount):
-        nameIndex = stringIndices[numCreated]
-        numCreated += 1
-        headers[numCreated] = {"Name" : strings[nameIndex], "ParentIndex": parentIndex}
-
-    # Using the newly-created map to pull header information from a `DataNode` inside `DataNodePool`:
-    for snpNodeKey in tup["SubNetworkPool"]["SubNetwork#0"]["DataNodePool"]:
-      snpNode = tup["SubNetworkPool"]["SubNetwork#0"]["DataNodePool"][snpNodeKey]
-      _header = headers[snpNode["Header"]]
-    ```
 - ## DataNodePool
     - A `SubNetwork`'s `DataNodePool` contains a lot of the actual data for various parts of the scene in various `DataNodes`.
     - There are multiple node types in `DataNodePool`, but the most commonly seen types are `Bool`, `Dilation`, `Float`, `Transform`, `ClipData` and `UberConstraintData`. So far the uses and importance of many of these nodes are unknown.
-<<<<<<< HEAD
 
-=======
->>>>>>> e24ed0071596ae0353003e272b19a0864a6024d7
       ```JSON
       "DataNodePool": {
         "DataNode#274": {
@@ -277,7 +213,6 @@ While there are various sections within an `.oct` file, there are some that are 
               1.0
             ]
           }
-<<<<<<< HEAD
         }
       }
       ```
@@ -338,66 +273,6 @@ While there are various sections within an `.oct` file, there are some that are 
             }
           }
         }
-=======
-        }
-      }
-      ```
-- ## CollisionShapePool
-    - The `CollisionShapePool` contains all the collision geometry used by the model.
-    - These "Collision Shapes" are simplified shapes used for physics, hit detection, and interaction, *not* rendering.
-    - They are described with a `ShapeType` which contain coordinates indicating length, width, and height. Modifying these is largely unexplored.
-      ```JSON
-      "CollisionShapePool": {
-        "Shape#0": {
-          "ShapeType": "ConvexHull",
-          "SurfaceType": 0,
-          "CollisionLayer": 0,
-          "Points": [
-            0.6534011,
-            0.0,
-            -1.9657959,
-            -0.6534011,
-            0.0,
-            1.2484527,
-            -0.6534011,
-            0.0,
-            -1.9657959,
-            0.0,
-            0.08910293,
-            1.9657959,
-            0.6534011,
-            0.0,
-            1.2484527
-          ],
-          "CollisionMargin": 0.4
-        },
-        "Shape#1": {
-          "ShapeType": "Compound",
-          "Shapes": {
-            "Shape#0": {
-              "ShapeRef": 0,
-              "Transform": [
-                1.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                1.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                1.0,
-                0.0,
-                0.0,
-                0.3709195,
-                0.0,
-                1.0
-              ]
-            }
-          }
-        }
->>>>>>> e24ed0071596ae0353003e272b19a0864a6024d7
       },
       ```
 
@@ -405,10 +280,7 @@ While there are various sections within an `.oct` file, there are some that are 
     - Contains raw texture-related data to used by the model.
     - Contains texture entries which state the names of textures and their corresponding file paths as well as the `Type` of texture it is.
     - The purpose of `DataCRC` is unknown, however, `SourceFilePath` is used by the engine for caching purposes; meaning that you'll need to change it if you replace that texture with a new one and it's `SourceFilePath` is non-unique.
-<<<<<<< HEAD
-
-=======
->>>>>>> e24ed0071596ae0353003e272b19a0864a6024d7
+    
       ```JSON
       "TexturePool": {
         "Texture#0": {
@@ -445,10 +317,7 @@ While there are various sections within an `.oct` file, there are some that are 
 - ## MaterialPool
     - `MaterialPool` is the where material information is stored.
     - Here you can find various data on what shaders, textures, and effects parts of a model can use. Modifying values and entries within a material node can change the look of how a model appears.
-<<<<<<< HEAD
     
-=======
->>>>>>> e24ed0071596ae0353003e272b19a0864a6024d7
       ```JSON
       "MaterialPool": {
         "Material#2": {
