@@ -4,6 +4,7 @@
 
 ## What are `.oct` files?
 Files with the `.oct` extension are Tupperware files that describe a scene/game object, and often contain model metadata and textures. An `.oct` file doesn't just describe a 3D model, it typically contains a complete rigging and behavior system encompassing the following:
+
 - FX (e.g. weapon and turbo) attachment points (typically character-only)
 - Physics and Constraint systems
 - Animation logic (ClipData)
@@ -101,8 +102,10 @@ Depending on the `.oct` file you are decoding, there may be differences with whi
 
 ## Important sections within an `.oct`:
 While there are various sections within an `.oct` file, there are some that are especially important for modding, which will be listed here:
+
 - ## SubNetworkPool
     - While there isn't a ton of documentation or research behind `SubNetworkPool`, there are some things we know and can derive from context clues. The `"Scene"` listed within `SubNetworkPool` is the main network containing nearly everything. In other words, `SubNetworkPool` is the 'main container' holding all objects, controls, and logic for the scene.
+
     ```JSON
     "SubNetworkPool": {
       "SubNetwork#0": {
@@ -112,7 +115,9 @@ While there are various sections within an `.oct` file, there are some that are 
       }
     }
     ```
+
 - ## HeaderStrings / HeaderStringIndices / HeaderLayout
+
     ```JSON
     "SubNetwork#0": {
       "Name": "Scene",
@@ -130,7 +135,9 @@ While there are various sections within an `.oct` file, there are some that are 
       ...
     }
     ```
+
     These three keys inside a `SubNetwork` definition describe the heirarchy of `Headers`, which are referenced within the nodes inside the network's `DataPool`. `HeaderLayout` is where it all starts; to interpret it correctly, you'll go through this array and process two elements at a time. The first element is an index that will eventually point back to a parent, and the second element will state the number of children. `HeaderStringIndices` maps the indices of headers into indices into the `HeaderStrings` array. (**If you're a non-programmer, you can just think of `HeaderStrings` as an immutable dictionary of all named and utilized parts of the model such as controls, bones, facial features, and other systems like weapons.**)
+
     ```py
     import json
 
@@ -166,9 +173,11 @@ While there are various sections within an `.oct` file, there are some that are 
       snpNode = tup["SubNetworkPool"]["SubNetwork#0"]["DataNodePool"][snpNodeKey]
       _header = headers[snpNode["Header"]]
     ```
+
 - ## DataNodePool
     - A `SubNetwork`'s `DataNodePool` contains a lot of the actual data for various parts of the scene in various `DataNodes`.
     - There are multiple node types in `DataNodePool`, but the most commonly seen types are `Bool`, `Dilation`, `Float`, `Transform`, `ClipData` and `UberConstraintData`. So far the uses and importance of many of these nodes are unknown.
+
       ```JSON
       "DataNodePool": {
         "DataNode#274": {
@@ -207,10 +216,12 @@ While there are various sections within an `.oct` file, there are some that are 
         }
       }
       ```
+
 - ## CollisionShapePool
     - The `CollisionShapePool` contains all the collision geometry used by the model.
     - These "Collision Shapes" are simplified shapes used for physics, hit detection, and interaction, *not* rendering.
     - They are described with a `ShapeType` which contain coordinates indicating length, width, and height. Modifying these is largely unexplored.
+
       ```JSON
       "CollisionShapePool": {
         "Shape#0": {
@@ -269,6 +280,7 @@ While there are various sections within an `.oct` file, there are some that are 
     - Contains raw texture-related data to used by the model.
     - Contains texture entries which state the names of textures and their corresponding file paths as well as the `Type` of texture it is.
     - The purpose of `DataCRC` is unknown, however, `SourceFilePath` is used by the engine for caching purposes; meaning that you'll need to change it if you replace that texture with a new one and it's `SourceFilePath` is non-unique.
+    
       ```JSON
       "TexturePool": {
         "Texture#0": {
@@ -305,6 +317,7 @@ While there are various sections within an `.oct` file, there are some that are 
 - ## MaterialPool
     - `MaterialPool` is the where material information is stored.
     - Here you can find various data on what shaders, textures, and effects parts of a model can use. Modifying values and entries within a material node can change the look of how a model appears.
+    
       ```JSON
       "MaterialPool": {
         "Material#2": {
