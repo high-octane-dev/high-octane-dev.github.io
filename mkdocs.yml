@@ -13,6 +13,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tilde
 theme:
   name: material
   palette:
