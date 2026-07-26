@@ -2,15 +2,15 @@
   "files": [
     {
       "path": "Cars-2-Arcade.gzf",
-      "sha256": "b4426086027f6199c15f0cecdb6a38077cdea24cde5a1782340f02ecc86ce4b4",
-      "size": 153097130,
+      "sha256": "ee593c4aab6077998114b667c3c90102f9944dd34c6129bdc8c2309479fa956d",
+      "size": 150995995,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df506232532482802500",
-        "last_modified_time": 1784000442942,
-        "latest_version": 53,
+        "last_modified_time": 1785087244867,
+        "latest_version": 54,
         "project_path": "/Cars-2-Arcade.exe",
-        "version": 53,
+        "version": 54,
         "version_history": [
           {
             "comment": "add cars 2 arcade",
@@ -329,6 +329,12 @@
             "create_time": 1784000442942,
             "user": "ft24",
             "version": 53
+          },
+          {
+            "comment": "",
+            "create_time": 1785087244867,
+            "user": "ft24",
+            "version": 54
           }
         ],
         "versioned": true
@@ -336,15 +342,15 @@
     },
     {
       "path": "Cars-2-The-Video-Game-PC.gzf",
-      "sha256": "bee3760b69a91845fa38d4271c677c645dec7dd1db528baab14147f576f60256",
-      "size": 132088324,
+      "sha256": "0f8848140e33d5dbd331e47c04f0c8f77cf20c6c3c720574f28619716194a881",
+      "size": 132091167,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df4f4232341826367500",
-        "last_modified_time": 1784000460575,
-        "latest_version": 45,
+        "last_modified_time": 1785088026306,
+        "latest_version": 46,
         "project_path": "/Cars-2-The-Video-Game-PC.exe",
-        "version": 45,
+        "version": 46,
         "version_history": [
           {
             "comment": "add 2TVG PC",
@@ -615,6 +621,12 @@
             "create_time": 1784000460575,
             "user": "ft24",
             "version": 45
+          },
+          {
+            "comment": "",
+            "create_time": 1785088026306,
+            "user": "ft24",
+            "version": 46
           }
         ],
         "versioned": true
@@ -622,15 +634,15 @@
     },
     {
       "path": "Cars-2-The-Video-Game-Xbox360.gzf",
-      "sha256": "d2984fd983bbbed705aa1b8b39973d92ba17af5d02bc43bc644d03bc537bd75f",
-      "size": 53052757,
+      "sha256": "51fc46b7aabed1a64e2bf1e95d005830a989d784bab875546990837ae828787b",
+      "size": 53052861,
       "source": {
         "content_type": "Program",
         "file_id": "c0a8561fc64e108253352429100",
-        "last_modified_time": 1781754420031,
-        "latest_version": 14,
+        "last_modified_time": 1785088108189,
+        "latest_version": 15,
         "project_path": "/Cars-2-The-Video-Game-Xbox360.xex",
-        "version": 14,
+        "version": 15,
         "version_history": [
           {
             "comment": "",
@@ -715,6 +727,12 @@
             "create_time": 1781754420031,
             "user": "ft24",
             "version": 14
+          },
+          {
+            "comment": "",
+            "create_time": 1785088108189,
+            "user": "ft24",
+            "version": 15
           }
         ],
         "versioned": true
@@ -722,8 +740,8 @@
     },
     {
       "path": "Cars-Mater-National-Championship-PC.gzf",
-      "sha256": "95c993f189a9d591f0e48d731c5ac47560df54289a7bcecc71911e960edee407",
-      "size": 21897432,
+      "sha256": "c4e9adcec5f404f87f177ac1c3a026707ffbba8cf7f1d71dc548db27a3eee0d3",
+      "size": 21897431,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96dc0c295707939680500",
