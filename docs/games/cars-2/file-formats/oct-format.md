@@ -474,6 +474,8 @@ While there are various sections within an `.oct` file, there are some that are 
 
       `SkinRemap` doesn't exist on the console versions of Cars 2, ~~because of course it doesn't. Nothing is ever as simple as it should be.~~ because there are more than enough vertex shader constant registers on both PlayStation 3 and Xbox 360 to fit every bone's transform without needing to remap things. ~~I don't know who to blame here. Microsoft? NVIDIA? AMD? I'm not smart enough to figure this one out.~~
 
+      Note: If you want to know why *Cars 2 Restorations* took five million years to release, it's because of `SkinRemap` and the 42 bone-influence limit. Specifically, the two Mater costumes that absolutely nobody would miss if they were removed from the game: Mater Ivan and Mater Kabuki. Because Avalanche had the ingenius idea of not splitting up their Cab and Tow meshes, their Xbox 360 models are fundamentally incompatible with Arcade by default. We had to develop custom model tools to get these two working.
+
 - ## SceneTreeNodePool
     - Describes `SceneTreeNode`s. As their name suggests, these describe nodes in the scene tree; bones, meshes, and everything in between are listed here:
 
