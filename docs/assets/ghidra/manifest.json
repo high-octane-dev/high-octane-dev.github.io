@@ -2,15 +2,15 @@
   "files": [
     {
       "path": "Cars-2-Arcade.gzf",
-      "sha256": "3ef7a6b9e50606b94cfcd61482418aac967c17f52ba8c22341dd5ac81edb3882",
-      "size": 151028987,
+      "sha256": "e4859f355862d50bb7221a74c1ab71ec9a10bac13ea97c1545e04f1ee63a8e1f",
+      "size": 151068919,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df506232532482802500",
-        "last_modified_time": 1785739156983,
-        "latest_version": 55,
+        "last_modified_time": 1786292109870,
+        "latest_version": 56,
         "project_path": "/Cars-2-Arcade.exe",
-        "version": 55,
+        "version": 56,
         "version_history": [
           {
             "comment": "add cars 2 arcade",
@@ -341,6 +341,12 @@
             "create_time": 1785739156983,
             "user": "ft24",
             "version": 55
+          },
+          {
+            "comment": "",
+            "create_time": 1786292109870,
+            "user": "ft24",
+            "version": 56
           }
         ],
         "versioned": true
@@ -348,8 +354,8 @@
     },
     {
       "path": "Cars-2-The-Video-Game-PC.gzf",
-      "sha256": "b8508174116499042c948ea455cb1fa9f68567000bc41e7645182775b3ec47e0",
-      "size": 132091168,
+      "sha256": "1b387bb532bafd0a8cd3abac617e1ae2e874a76738b720ddd90903e4eb6681e8",
+      "size": 132091167,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df4f4232341826367500",
@@ -640,7 +646,7 @@
     },
     {
       "path": "Cars-2-The-Video-Game-Xbox360.gzf",
-      "sha256": "41a96133a32d8f865ab0188f70e37922c128be486d8d3918c70de47d1743e2d1",
+      "sha256": "4459508802f333c2d2363e9fc8fa0a8f55f205220d1b37952a5e237ef1a31536",
       "size": 53052861,
       "source": {
         "content_type": "Program",
@@ -746,8 +752,8 @@
     },
     {
       "path": "Cars-Mater-National-Championship-PC.gzf",
-      "sha256": "fb45e15f66ddaafeb0455f75bcee117286df6bf5cc0c1cbbacd10c4b9613058a",
-      "size": 21897431,
+      "sha256": "8cfb58f5267914380471562c736089de4baf89d49b726a64fbfaac280838ef52",
+      "size": 21897432,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96dc0c295707939680500",
