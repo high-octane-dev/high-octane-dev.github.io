@@ -46,6 +46,7 @@ nav:
                 - "./games/cars-2/guides/arcade-essentials.md"
     - Plugin Development:
         - "./plugin-development/ghidra-setup.md"
+        - "./plugin-development/ghidra-projects.md"
         - "./plugin-development/cheat-engine-setup.md"
         - "./plugin-development/creating-a-pentane-plugin-cpp.md"
         - "./plugin-development/creating-a-pentane-plugin-rust.md"
