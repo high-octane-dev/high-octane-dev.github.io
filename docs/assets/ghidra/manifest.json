@@ -2,15 +2,15 @@
   "files": [
     {
       "path": "Cars-2-Arcade.gzf",
-      "sha256": "e4859f355862d50bb7221a74c1ab71ec9a10bac13ea97c1545e04f1ee63a8e1f",
-      "size": 151068919,
+      "sha256": "e4b0b7b6df5db0bec079534b3287928671aebc55e41a703988e558cf2a965f26",
+      "size": 155049893,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df506232532482802500",
-        "last_modified_time": 1786292109870,
-        "latest_version": 56,
+        "last_modified_time": 1786481712952,
+        "latest_version": 57,
         "project_path": "/Cars-2-Arcade.exe",
-        "version": 56,
+        "version": 57,
         "version_history": [
           {
             "comment": "add cars 2 arcade",
@@ -347,6 +347,12 @@
             "create_time": 1786292109870,
             "user": "ft24",
             "version": 56
+          },
+          {
+            "comment": "Upgraded to Ghidra 12.1.2",
+            "create_time": 1786481712952,
+            "user": "klemens",
+            "version": 57
           }
         ],
         "versioned": true
@@ -354,15 +360,15 @@
     },
     {
       "path": "Cars-2-The-Video-Game-PC.gzf",
-      "sha256": "1b387bb532bafd0a8cd3abac617e1ae2e874a76738b720ddd90903e4eb6681e8",
-      "size": 132091167,
+      "sha256": "e6cbcf6b2844bd79c4fe61f21d4ac9ca58706a4f2e7b53dbb0f8719479951df7",
+      "size": 134951092,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df4f4232341826367500",
-        "last_modified_time": 1785088026306,
-        "latest_version": 46,
+        "last_modified_time": 1786481920020,
+        "latest_version": 47,
         "project_path": "/Cars-2-The-Video-Game-PC.exe",
-        "version": 46,
+        "version": 47,
         "version_history": [
           {
             "comment": "add 2TVG PC",
@@ -639,6 +645,12 @@
             "create_time": 1785088026306,
             "user": "ft24",
             "version": 46
+          },
+          {
+            "comment": "Upgraded to Ghidra 12.1.2",
+            "create_time": 1786481920020,
+            "user": "klemens",
+            "version": 47
           }
         ],
         "versioned": true
@@ -646,15 +658,15 @@
     },
     {
       "path": "Cars-2-The-Video-Game-Xbox360.gzf",
-      "sha256": "4459508802f333c2d2363e9fc8fa0a8f55f205220d1b37952a5e237ef1a31536",
-      "size": 53052861,
+      "sha256": "68e7248578051582d2e12549be0828d0fb71f8c7e55cc63870b813a84bd84e6e",
+      "size": 54996497,
       "source": {
         "content_type": "Program",
         "file_id": "c0a8561fc64e108253352429100",
-        "last_modified_time": 1785088108189,
-        "latest_version": 15,
+        "last_modified_time": 1786482263000,
+        "latest_version": 16,
         "project_path": "/Cars-2-The-Video-Game-Xbox360.xex",
-        "version": 15,
+        "version": 16,
         "version_history": [
           {
             "comment": "",
@@ -745,6 +757,12 @@
             "create_time": 1785088108189,
             "user": "ft24",
             "version": 15
+          },
+          {
+            "comment": "Upgraded to Ghidra 12.1.2",
+            "create_time": 1786482263000,
+            "user": "klemens",
+            "version": 16
           }
         ],
         "versioned": true
@@ -752,15 +770,15 @@
     },
     {
       "path": "Cars-Mater-National-Championship-PC.gzf",
-      "sha256": "8cfb58f5267914380471562c736089de4baf89d49b726a64fbfaac280838ef52",
-      "size": 21897432,
+      "sha256": "fdfd5bafd367e10200a4d1ef6150234ff8dbb98a78d27fa7b440fb28eb75e1e9",
+      "size": 22158384,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96dc0c295707939680500",
-        "last_modified_time": 1784832450497,
-        "latest_version": 16,
+        "last_modified_time": 1786481453115,
+        "latest_version": 17,
         "project_path": "/Cars-Mater-National-Championship-PC.exe",
-        "version": 16,
+        "version": 17,
         "version_history": [
           {
             "comment": "Upgrade DB to 11.3.1",
@@ -857,6 +875,12 @@
             "create_time": 1784832450497,
             "user": "ft24",
             "version": 16
+          },
+          {
+            "comment": "Upgraded to Ghidra 12.1.2",
+            "create_time": 1786481453115,
+            "user": "klemens",
+            "version": 17
           }
         ],
         "versioned": true
