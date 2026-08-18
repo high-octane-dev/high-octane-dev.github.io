@@ -2,7 +2,7 @@
   "files": [
     {
       "path": "Cars-2-Arcade.gzf",
-      "sha256": "e4b0b7b6df5db0bec079534b3287928671aebc55e41a703988e558cf2a965f26",
+      "sha256": "87d639111b57a7a7440fc1d7e96d42d55d405356843c714830130a4e8a131e0d",
       "size": 155049893,
       "source": {
         "content_type": "Program",
@@ -360,7 +360,7 @@
     },
     {
       "path": "Cars-2-The-Video-Game-PC.gzf",
-      "sha256": "e6cbcf6b2844bd79c4fe61f21d4ac9ca58706a4f2e7b53dbb0f8719479951df7",
+      "sha256": "13c542810388a2a591eabf411aa39a99db33f51cee58eeb22afa845cd1cd1fed",
       "size": 134951092,
       "source": {
         "content_type": "Program",
@@ -658,7 +658,7 @@
     },
     {
       "path": "Cars-2-The-Video-Game-Xbox360.gzf",
-      "sha256": "68e7248578051582d2e12549be0828d0fb71f8c7e55cc63870b813a84bd84e6e",
+      "sha256": "e3ffcf5ea9e97a0cd8ca412534bca93255eb286c91e33508e555ffc3aa6b5487",
       "size": 54996497,
       "source": {
         "content_type": "Program",
@@ -770,8 +770,8 @@
     },
     {
       "path": "Cars-Mater-National-Championship-PC.gzf",
-      "sha256": "fdfd5bafd367e10200a4d1ef6150234ff8dbb98a78d27fa7b440fb28eb75e1e9",
-      "size": 22158384,
+      "sha256": "74d0cb4df0fe1d8d90ef2b467f74efde070a1fc4d45d681711d83db96addb79a",
+      "size": 22158383,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96dc0c295707939680500",
@@ -881,6 +881,28 @@
             "create_time": 1786481453115,
             "user": "klemens",
             "version": 17
+          }
+        ],
+        "versioned": true
+      }
+    },
+    {
+      "path": "ai-testing/Cars-Mater-National-Championship-PC.gzf",
+      "sha256": "266c48538b3270bb4053f28b8a202f7943ac87a067e7348776330ce2de027a72",
+      "size": 21159261,
+      "source": {
+        "content_type": "Program",
+        "file_id": "7f011997f21629984736595",
+        "last_modified_time": 1787077703339,
+        "latest_version": 1,
+        "project_path": "/ai-testing/Cars-Mater-National-Championship-PC.exe",
+        "version": 1,
+        "version_history": [
+          {
+            "comment": "Initial AI changes from LLM testing (branching of v17)",
+            "create_time": 1787077703339,
+            "user": "klemens",
+            "version": 1
           }
         ],
         "versioned": true
