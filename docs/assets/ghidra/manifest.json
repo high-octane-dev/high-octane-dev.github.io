@@ -2,15 +2,15 @@
   "files": [
     {
       "path": "Cars-2-Arcade.gzf",
-      "sha256": "e6b14505c320d74eba85564636132e996303b9344205356c396dddeeabacbcd8",
-      "size": 155049894,
+      "sha256": "f459567cf18bc81fe3c69c48d2455b2787aa0d63d375c8d9757baef1171a717e",
+      "size": 150787821,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df506232532482802500",
-        "last_modified_time": 1786481712952,
-        "latest_version": 57,
+        "last_modified_time": 1787258077951,
+        "latest_version": 58,
         "project_path": "/Cars-2-Arcade.exe",
-        "version": 57,
+        "version": 58,
         "version_history": [
           {
             "comment": "add cars 2 arcade",
@@ -353,6 +353,12 @@
             "create_time": 1786481712952,
             "user": "klemens",
             "version": 57
+          },
+          {
+            "comment": "",
+            "create_time": 1787258077951,
+            "user": "ft24",
+            "version": 58
           }
         ],
         "versioned": true
@@ -360,7 +366,7 @@
     },
     {
       "path": "Cars-2-The-Video-Game-PC.gzf",
-      "sha256": "2d57c7373adf7411294cb73edf4cb7df6d85ab242cfdc12d154340b323c602c9",
+      "sha256": "869e4b5a85b5c90244c8342c54522dd20a1f098de902bf9a1a0f31ff60d0c721",
       "size": 134951092,
       "source": {
         "content_type": "Program",
@@ -658,8 +664,8 @@
     },
     {
       "path": "Cars-2-The-Video-Game-Xbox360.gzf",
-      "sha256": "bb0ab4ad2ba5fa947ef31d72756bbfb5b702b2a056f7bce4567fc1d75a1e5c8e",
-      "size": 54996497,
+      "sha256": "936dee64b55a2bdab88b6d461440ad94c749ad030cea373ddb017caf87f094a4",
+      "size": 54996495,
       "source": {
         "content_type": "Program",
         "file_id": "c0a8561fc64e108253352429100",
@@ -770,15 +776,15 @@
     },
     {
       "path": "Cars-Mater-National-Championship-PC.gzf",
-      "sha256": "cd4a0f3c467add83203b3600567894f2a736b9a3e8e025581df80557e8cb32ab",
-      "size": 21159212,
+      "sha256": "2c1b25c90c196a79525d6e36d24427389e1e97380c05b82f813d826794e5f34f",
+      "size": 21159202,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96dc0c295707939680500",
-        "last_modified_time": 1787160535431,
-        "latest_version": 18,
+        "last_modified_time": 1787258088715,
+        "latest_version": 19,
         "project_path": "/Cars-Mater-National-Championship-PC.exe",
-        "version": 18,
+        "version": 19,
         "version_history": [
           {
             "comment": "Upgrade DB to 11.3.1",
@@ -887,6 +893,12 @@
             "create_time": 1787160535431,
             "user": "ft24",
             "version": 18
+          },
+          {
+            "comment": "",
+            "create_time": 1787258088715,
+            "user": "ft24",
+            "version": 19
           }
         ],
         "versioned": true
@@ -894,7 +906,7 @@
     },
     {
       "path": "ai-testing/Cars-Mater-National-Championship-PC.gzf",
-      "sha256": "e82ebf6db6d75bfebf98fdda444ce5dfc351ff05f520881cefe5452ecee51cb4",
+      "sha256": "f52d0b25932937c02765aa83f40e5626563b97864895be1a06f7f92b88e27235",
       "size": 21159261,
       "source": {
         "content_type": "Program",
