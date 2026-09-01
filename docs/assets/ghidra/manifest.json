@@ -2,15 +2,15 @@
   "files": [
     {
       "path": "Cars-2-Arcade.gzf",
-      "sha256": "72c875d3408a4fe90f05850a2dccac792763f9fe9da6f3fc39bc0c9f36abed44",
-      "size": 150805736,
+      "sha256": "873d914a6af3348d34ec4ed2bfed9067a318f210e38a6f92d6458593112b0d9b",
+      "size": 150805641,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df506232532482802500",
-        "last_modified_time": 1788138240067,
-        "latest_version": 59,
+        "last_modified_time": 1788258371986,
+        "latest_version": 60,
         "project_path": "/Cars-2-Arcade.exe",
-        "version": 59,
+        "version": 60,
         "version_history": [
           {
             "comment": "add cars 2 arcade",
@@ -365,6 +365,12 @@
             "create_time": 1788138240067,
             "user": "klemens",
             "version": 59
+          },
+          {
+            "comment": "removed debugging comment",
+            "create_time": 1788258371986,
+            "user": "klemens",
+            "version": 60
           }
         ],
         "versioned": true
