@@ -676,15 +676,15 @@
     },
     {
       "path": "Cars-2-The-Video-Game-Xbox360.gzf",
-      "sha256": "1c12a52339b3971e90ac8acc148207b642279437ac9fd8f84823743d162ff1d1",
-      "size": 54996496,
+      "sha256": "ed39a24e18dc10dd2abf42099ee620332990f12d93857515f2c475b265dff9a1",
+      "size": 54036217,
       "source": {
         "content_type": "Program",
         "file_id": "c0a8561fc64e108253352429100",
-        "last_modified_time": 1786482263000,
-        "latest_version": 16,
+        "last_modified_time": 1789693592700,
+        "latest_version": 17,
         "project_path": "/Cars-2-The-Video-Game-Xbox360.xex",
-        "version": 16,
+        "version": 17,
         "version_history": [
           {
             "comment": "",
@@ -781,6 +781,12 @@
             "create_time": 1786482263000,
             "user": "klemens",
             "version": 16
+          },
+          {
+            "comment": "",
+            "create_time": 1789693592700,
+            "user": "ft24",
+            "version": 17
           }
         ],
         "versioned": true
@@ -788,15 +794,15 @@
     },
     {
       "path": "Cars-Mater-National-Championship-PC.gzf",
-      "sha256": "5e369417d6c0d49fb0bf4f7fd84891702a4ac66571be3d6c47c058a322c3ce07",
-      "size": 21159201,
+      "sha256": "4adfa6686768b04ef579743e2f9272a736b2220a1034176052c47f54d6956fc9",
+      "size": 21172089,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96dc0c295707939680500",
-        "last_modified_time": 1787258088715,
-        "latest_version": 19,
+        "last_modified_time": 1789693602692,
+        "latest_version": 20,
         "project_path": "/Cars-Mater-National-Championship-PC.exe",
-        "version": 19,
+        "version": 20,
         "version_history": [
           {
             "comment": "Upgrade DB to 11.3.1",
@@ -911,6 +917,12 @@
             "create_time": 1787258088715,
             "user": "ft24",
             "version": 19
+          },
+          {
+            "comment": "",
+            "create_time": 1789693602692,
+            "user": "ft24",
+            "version": 20
           }
         ],
         "versioned": true
