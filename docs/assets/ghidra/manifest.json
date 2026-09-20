@@ -2,15 +2,15 @@
   "files": [
     {
       "path": "Cars-2-Arcade.gzf",
-      "sha256": "873d914a6af3348d34ec4ed2bfed9067a318f210e38a6f92d6458593112b0d9b",
-      "size": 150805641,
+      "sha256": "b62787c9fd1886725102b0751dd5e8c6bc967fbf8c58b2614f5f926b29836d18",
+      "size": 150835606,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df506232532482802500",
-        "last_modified_time": 1788258371986,
-        "latest_version": 60,
+        "last_modified_time": 1789924592582,
+        "latest_version": 61,
         "project_path": "/Cars-2-Arcade.exe",
-        "version": 60,
+        "version": 61,
         "version_history": [
           {
             "comment": "add cars 2 arcade",
@@ -371,6 +371,12 @@
             "create_time": 1788258371986,
             "user": "klemens",
             "version": 60
+          },
+          {
+            "comment": "Some QuickStart/CarEnergy Labels",
+            "create_time": 1789924592582,
+            "user": "ft24",
+            "version": 61
           }
         ],
         "versioned": true
@@ -676,15 +682,15 @@
     },
     {
       "path": "Cars-2-The-Video-Game-Xbox360.gzf",
-      "sha256": "ed39a24e18dc10dd2abf42099ee620332990f12d93857515f2c475b265dff9a1",
-      "size": 54036217,
+      "sha256": "19e97978104cf05a28f224f3eb3f6a8f9350183180befbfb4602210b18bf10b7",
+      "size": 54061972,
       "source": {
         "content_type": "Program",
         "file_id": "c0a8561fc64e108253352429100",
-        "last_modified_time": 1789693592700,
-        "latest_version": 17,
+        "last_modified_time": 1789924883144,
+        "latest_version": 18,
         "project_path": "/Cars-2-The-Video-Game-Xbox360.xex",
-        "version": 17,
+        "version": 18,
         "version_history": [
           {
             "comment": "",
@@ -787,6 +793,12 @@
             "create_time": 1789693592700,
             "user": "ft24",
             "version": 17
+          },
+          {
+            "comment": "",
+            "create_time": 1789924883144,
+            "user": "ft24",
+            "version": 18
           }
         ],
         "versioned": true
