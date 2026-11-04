@@ -2,15 +2,15 @@
   "files": [
     {
       "path": "Cars-2-Arcade.gzf",
-      "sha256": "302600b0548698b53ec48d28339a15f1eed1be80c1131f932b18aa30d27a3c2b",
-      "size": 150892339,
+      "sha256": "01001de5a2a48072674acc6735d0a58902b4453775a9c80b91dda8efed6687de",
+      "size": 151024641,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df506232532482802500",
-        "last_modified_time": 1792172391834,
-        "latest_version": 65,
+        "last_modified_time": 1793824956118,
+        "latest_version": 66,
         "project_path": "/Cars-2-Arcade.exe",
-        "version": 65,
+        "version": 66,
         "version_history": [
           {
             "comment": "add cars 2 arcade",
@@ -401,6 +401,12 @@
             "create_time": 1792172391834,
             "user": "ft24",
             "version": 65
+          },
+          {
+            "comment": "",
+            "create_time": 1793824956118,
+            "user": "ft24",
+            "version": 66
           }
         ],
         "versioned": true
@@ -408,15 +414,15 @@
     },
     {
       "path": "Cars-2-The-Video-Game-PC.gzf",
-      "sha256": "1a293293cf451f12ef4fed57a8b6c395e4ac26d04399d09d7b99be9790de193f",
-      "size": 134951092,
+      "sha256": "3c6bb9f147ad206de2e8bf21dfd27f923c5f241b912b3ac7be61a80589b5f74b",
+      "size": 127706844,
       "source": {
         "content_type": "Program",
         "file_id": "ac2b96df4f4232341826367500",
-        "last_modified_time": 1786481920020,
-        "latest_version": 47,
+        "last_modified_time": 1793828384705,
+        "latest_version": 48,
         "project_path": "/Cars-2-The-Video-Game-PC.exe",
-        "version": 47,
+        "version": 48,
         "version_history": [
           {
             "comment": "add 2TVG PC",
@@ -699,6 +705,12 @@
             "create_time": 1786481920020,
             "user": "klemens",
             "version": 47
+          },
+          {
+            "comment": "",
+            "create_time": 1793828384705,
+            "user": "ft24",
+            "version": 48
           }
         ],
         "versioned": true
